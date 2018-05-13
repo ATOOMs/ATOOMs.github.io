@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://atooms.github.io/2018/05/13/Hexo-GitHub博客搭建实战/a1.jpg">
 <meta property="og:image" content="https://atooms.github.io/2018/05/13/Hexo-GitHub博客搭建实战/a2.jpg">
-<meta property="og:updated_time" content="2018-05-13T12:37:10.000Z">
+<meta property="og:updated_time" content="2018-05-13T12:41:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+GitHub博客搭建实战">
 <meta name="twitter:description" content="Github的注册大家点击https://github.com/按要求注册即可。  username一定要起一个好听的名字，这在创建博客域名的时候会用到  搭建环境 安装Node.js:https://nodejs.org/en/windows下点击链接，下载安装（下一步下一步下一步…) 安装Git:https://github.com/waylau/git-for-win同上windows下点击">
@@ -436,15 +436,14 @@
 </ol>
 </li>
 </ol>
-<p>#配置博客<br>在<code>blog</code>目录下，用文本编辑器打开<code>_config.yml</code>文件，下面我们来修改参数信息</p>
+<h1 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h1><p>在<code>blog</code>目录下，用文本编辑器打开<code>_config.yml</code>文件，下面我们来修改参数信息</p>
 <blockquote>
 <p>提示，修改的时候在每个参数的<code>:</code>后面都需要有一个空格,这里没写的先不要修改。</p>
 </blockquote>
 <h2 id="修改网站相关信息"><a href="#修改网站相关信息" class="headerlink" title="修改网站相关信息"></a>修改网站相关信息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: xxx的博客</span><br><span class="line">subtitle: 个性签名</span><br><span class="line">description: 网页描述</span><br><span class="line">author：作者</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: Asia/Shanghai</span><br></pre></td></tr></table></figure>
-<p>##配置部署<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: https://github.com/你的用户名/你的用户名.github.io</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure></p>
-<p>##配置统一资源定位<br><code>url: https://你的用户名.github.io</code></p>
-<p>#发表文章</p>
-<ol>
+<h2 id="配置部署"><a href="#配置部署" class="headerlink" title="配置部署"></a>配置部署</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: https://github.com/你的用户名/你的用户名.github.io</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+<h2 id="配置统一资源定位"><a href="#配置统一资源定位" class="headerlink" title="配置统一资源定位"></a>配置统一资源定位</h2><p><code>url: https://你的用户名.github.io</code></p>
+<h1 id="发表文章"><a href="#发表文章" class="headerlink" title="发表文章"></a>发表文章</h1><ol>
 <li>在命令行中输入<code>hexo new &quot;我的测试文章&quot;</code></li>
 <li>按提示路径找到该文章，打开后可使用<code>Markdown</code>语法编辑文章</li>
 <li>接着在<code>blog</code>目录下，输入如下三个命令<ol>
@@ -705,7 +704,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github的注册"><span class="nav-number">1.</span> <span class="nav-text">Github的注册</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建环境"><span class="nav-number">2.</span> <span class="nav-text">搭建环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置Github"><span class="nav-number">3.</span> <span class="nav-text">配置Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化博客"><span class="nav-number">4.</span> <span class="nav-text">初始化博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改网站相关信息"><span class="nav-number">4.1.</span> <span class="nav-text">修改网站相关信息</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github的注册"><span class="nav-number">1.</span> <span class="nav-text">Github的注册</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建环境"><span class="nav-number">2.</span> <span class="nav-text">搭建环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置Github"><span class="nav-number">3.</span> <span class="nav-text">配置Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化博客"><span class="nav-number">4.</span> <span class="nav-text">初始化博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置博客"><span class="nav-number">5.</span> <span class="nav-text">配置博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改网站相关信息"><span class="nav-number">5.1.</span> <span class="nav-text">修改网站相关信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置部署"><span class="nav-number">5.2.</span> <span class="nav-text">配置部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置统一资源定位"><span class="nav-number">5.3.</span> <span class="nav-text">配置统一资源定位</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#发表文章"><span class="nav-number">6.</span> <span class="nav-text">发表文章</span></a></li></ol></div>
             
 
           </div>
