@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Windows下安装MySql]]></title>
+    <url>%2F2018%2F05%2F14%2FWindows%E4%B8%8B%E5%AE%89%E8%A3%85MySql%2F</url>
+    <content type="text"><![CDATA[下载MySql 下载地址：https://dev.mysql.com/downloads/mysql/ 下载zip包： 下载后解压：D:\软件安装包\mysql-5.7.20-winx64 环境变量配置 变量名：MYSQL_HOME 变量值：D:\软件安装包\mysql-5.7.20-winx64 path里添加：%MYSQL_HOME%\bin;生成data文件： 以管理员身份运行cmd,进入D:\软件安装包\mysql-5.7.20-winx64\bin下，执行命令：mysqld --initialize-insecure --user=mysql 启动服务执行命令：net start mysql启动mysql服务，若提示：服务名无效等问题详见问题解决，若成功启动服务则安装成功。 问题解决提示：服务名无效解决方法：执行命令：mysqld -install即可若提示服务正在启动或停止中，请稍候片刻再试一次。则需要先去资源管理器中把mysql进程结束，重新启动即可。 登录mysql以管理员身份运行cmd,进入D:\软件安装包\mysql-5.7.20-winx64\bin下，执行命令：mysql -u root -p因为之前没设置密码，所以密码为空，不用输入密码，直接回车即可。 设置或修改密码 修改 update mysql.user set authentication_string=password(&quot;123456&quot;) where user =&quot;root&quot; 注意password(“123456”),此处引号中的内容是密码，自己可以随便设置 保存 flush privileges作用：相当于保存，执行此命令后，设置才生效，若不执行，还是之前的密码不变]]></content>
+      <tags>
+        <tag>MySql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java中String、StringBuilder和StringBuffer的区别]]></title>
     <url>%2F2018%2F05%2F14%2FJava%E4%B8%ADString%E3%80%81StringBuilder%E5%92%8CStringBuffer%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
     <content type="text"><![CDATA[整理下Java中String，StringBuilder和StringBuffer知识点的理解。 String字符串常量 StringBuffer字符串变量（线程安全） StringBuilder字符串变量（非线程安全） String所谓常量，即该对象的值已经被赋予了，不能再更改了，若非要更改，则只能再重新创建另一个对象，在这个新创建的对象上再进行赋值。因此，每次在对String类型的对象进行改变的时候其实都等同于生成了一个新的String对象，然后指针指向新的String对象，所以经常改变内容的字符串最好不要用String。 StringBuffer所谓变量，即是可以随时变化的量。如果对StringBuffer对象进行改变，每次结果都会对StringBuffer对象进行操作，而不是生成新的对象。所以一般字符串要经常变化的话我推荐使用StringBuffer。 StringBuilderStringBuilder和StringBuffer类功能基本相似，方法也差不多，主要区别在于StringBuffer类的方法是多线程安全的，而StringBuilder不是线程安全的，相比而言StringBuilder类会略微快一点。]]></content>
