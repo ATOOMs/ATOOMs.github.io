@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mac用户如何将自己的代码上传至Git]]></title>
+    <url>%2F2018%2F05%2F14%2FMac%E7%94%A8%E6%88%B7%E5%A6%82%E4%BD%95%E5%B0%86%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0%E8%87%B3Git%2F</url>
+    <content type="text"><![CDATA[写在前面在尝试将自己的代码上传至Github上时走了不少弯路，后来偶然成功后，写下此教程，下面介绍通过git命令行来上传自己的代码。 通过git命令行git命令虽然很多，不过会基本的常用的命令，就还可以。 git init(作用：初始化你的文件夹） git add（作用：将你的仓库添加至远程） git commit -m&quot;你想输入的信息“(作用：将你的仓库提交至远程） git push origin master(作用：将你的仓库上传至远程）完成这四个步骤，就可以把代码上传到github上了。 详细步骤 下载git 12ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”brew install git 查看是否安装好git，打开终端输入git -version 若显示版本号即安装成功 克隆你github上面的项目到本地仓库，在命令行输入以下代码：git clone url然后回车。 这时你就可以看到你的电脑上多了一个以你仓库命名的文件夹啦。（其中url指你github上面仓库的地址，点开你的仓库就可以看到你仓库的地址啦。） 首先将你想上传的代码文件夹拖至这个新出现的仓库文件夹，然后命令行输入：cd 你的仓库文件夹名称接下来输入：git add 你想上传的代码文件夹名称或者是输入：git add.(add后面的.表示上传仓库中的所有内容）然后输入：git commit -m &quot;你想交代的内容&quot;最后输入：git push origin master过一小会就能在github的仓库中看到你上传的代码文件夹了。]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo+GitHub博客搭建实战]]></title>
     <url>%2F2018%2F05%2F13%2FHexo-GitHub%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%9E%E6%88%98%2F</url>
     <content type="text"><![CDATA[Github的注册大家点击https://github.com/按要求注册即可。 username一定要起一个好听的名字，这在创建博客域名的时候会用到 搭建环境 安装Node.js:https://nodejs.org/en/windows下点击链接，下载安装（下一步下一步下一步…) 安装Git:https://github.com/waylau/git-for-win同上windows下点击上述链接安装即可，不知道Git和Node.js的小伙伴也不要紧，就先知道是必须要有的环境就好。 安装完成后，在开始菜单里找到“Git“-&gt;”Git Bash“,按下图设置，名字和邮箱是Github上的。 安装hexonpm install -g hexo-cli至此本地环境已经搭建完成，下一步开始配置Github 配置Github 登录你刚才注册的Github帐号 点击Create a new repository如下图所示：其中仓库名称Respository name只能填写为，注意！！！是只能填写为你注册的用户名.github.io其他的一概不行！！！仓库创建完成后，开始生成添加秘钥。在终端下输入ssh-keygen -t rsa -C &quot;Github的注册邮箱地址&quot;一路一直按Enter过来就行，待秘钥生成完毕后会得到两个文件id_rsa和id_rsa.pub，用任意文本编辑器打开id_rsa.pub，全选里面的内容复制，然后进入https://github.com/settings/ssh将复制的内容粘贴到Key的输入框，Title里的内容可以随意填写，点击Add SSH key按钮即可。 初始化博客 在电脑里随便一个盘内，新建文件夹test,进入test,按住Shift键点击鼠标右键，点击此处打开命令窗口:输入：hexo init blog稍等片刻，待最后出现成功提示： INFO Start blogging with Hexo! 由于初始化hexo后source目录下自带一篇hello world文章，所以直接输入下面的命令 hexo generate hexo server 在浏览器输入 http://localhost:4000/就可以看见你的博客了![a3](/a3.jpg) 别激动这只是把网站部署到本地，别人看不见，下面我们把网站部署到Github上。 配置博客在blog目录下，用文本编辑器打开_config.yml文件，下面我们来修改参数信息 提示，修改的时候在每个参数的:后面都需要有一个空格,这里没写的先不要修改。 修改网站相关信息123456title: xxx的博客subtitle: 个性签名description: 网页描述author：作者language: zh-CNtimezone: Asia/Shanghai 配置部署1234deploy: type: git repo: https://github.com/你的用户名/你的用户名.github.io branch: master 配置统一资源定位url: https://你的用户名.github.io 发表文章 在命令行中输入hexo new &quot;我的测试文章&quot; 按提示路径找到该文章，打开后可使用Markdown语法编辑文章 接着在blog目录下，输入如下三个命令 hexo clean hexo generate hexo server(此时已经可以在本地浏览了，第4步可发送到远程） hexo deploy正常情况下会跳出Github登录，直接登录即可 若无错误，在浏览器输入博客地址：你的用户名.github.io，就可以看到内容了。]]></content>
