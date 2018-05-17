@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java代码块]]></title>
+    <url>%2F2018%2F05%2F17%2FJava%E4%BB%A3%E7%A0%81%E5%9D%97%2F</url>
+    <content type="text"><![CDATA[定义在Java中使用｛｝括起来的代码被称为代码块 局部代码块局部位置，常用于限定变量的生命周期 构造代码块在类中的成员位置，用{}括起来的代码。每次调用构造方法执行前，都会先执行构造代码块。作用：可以把多个构造方法中的共同代码放到一起，对对象进行初始化。 静态代码块在类中的成员位置。用{}括起来的代码。只不过它用static关键字修饰。 执行顺序静态代码块－&gt;构造代码块－&gt;构造方法静态代码块：只执行一次构造代码块：每次调用构造方法的时候都执行 示例代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657class Code &#123; static &#123; int a = 1000; System.out.println(a); &#125; //构造代码块 &#123; int x = 100; System.out.println(x); &#125; //构造方法 public Code()&#123; System.out.println("code"); &#125; //构造方法 public Code(int a)&#123; System.out.println("code"); &#125; //构造代码块 &#123; int y = 200; System.out.println(y); &#125; //静态代码块 static &#123; int b = 2000; System.out.println(b); &#125;&#125;class CodeDemo &#123; public static void main(String[] args) &#123; //局部代码块 &#123; int x = 10; System.out.println(x); &#125; //找不到符号 //System.out.println(x); &#123; int y = 20; System.out.println(y); &#125; System.out.println("---------------"); Code c = new Code(); System.out.println("---------------"); Code c2 = new Code(); System.out.println("---------------"); Code c3 = new Code(1); &#125;&#125;]]></content>
+      <categories>
+        <category>Java个人笔记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Java中的构造方法]]></title>
+    <url>%2F2018%2F05%2F17%2FJava%E4%B8%AD%E7%9A%84%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[构造方法作用用于对对象的属性进行初始化 构造方法格式 方法名必须与类名相同 没有返回值类型，void也没有 没有返回值 构造方法的注意事项 如果我们没写构造方法，系统会提供一个默认的无参构造方法 如果我们写了构造方法，系统将不再提供默认的构造方法，需要我们自己写出无参构造方法 案例1234567891011121314151617181920212223242526272829303132333435363738394041class Student &#123; private String name; private int age; public Student()&#123;&#125; public Student(String name,int age) &#123; this.name = name; this.age = age; &#125; public String getName() &#123; return name; &#125; public void setName(String name) &#123; this.name = name; &#125; public int getAge() &#123; return age; &#125; public void setAge(int age) &#123; this.age = age; &#125; &#125; class StudentDemo &#123; public static void main(String[] args) &#123; //方式1 Student s1 = new Student(); s1.setName("王五"); s1.setAge(27); System.out.println(s1.getName()+"---"+s1.getAge()); //方式2 Student s2 = new Student("赵六",30); System.out.println(s2.getName()+"---"+s2.getAge()); &#125; &#125; 代码执行过程 把Student.class文件加载到内存 在栈内存为s开辟空间 在堆内存为学生对象申请空间 给学生的成员变量进行默认初始化。null,0 给学生的成员变量进行显示初始化。王五,27 通过构造方法给成员变量进行初始化。赵六,30 对象构造完毕，把地址赋值给s变量]]></content>
+      <categories>
+        <category>Java个人笔记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Java笔记——static关键字]]></title>
+    <url>%2F2018%2F05%2F17%2FJava%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%2F</url>
+    <content type="text"><![CDATA[static特点 随着类的加载而加载 优先与对象存在 被类的所有对象共享 可以通过类名调用 静态变量与成员变量区别 所属不同 静态变量：属于类，类变量 成员变量：属于对象，对象变量 生命周期不同 静态变量：随着类的加载而加载，随着类的消失而消失 成员变量：随着对象的创建而存在，随着对象的消失而消失 调用不同 静态变量：可以通过对象名也可以通过类名调用 成员变量：只能通过对象名调用]]></content>
+      <categories>
+        <category>Java个人笔记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MySQL学习笔记.MySQL语法]]></title>
     <url>%2F2018%2F05%2F15%2FMySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-MySQL%E8%AF%AD%E6%B3%95%2F</url>
     <content type="text"><![CDATA[SQL语句分类 DDL(Data Definition Language) 数据定义语言 功能：创建、删除、修改库和表结构 DML(Data Manipulation Language) 数据操作语言 功能：增、删、改表记录 DCL(Data Control Language) 数据库控制语言 功能：用来定义访问权限和安全级别 DQL(Data Query Language) 数据库查询语言 功能：用来查询纪录 DDL(数据定义语言)语法数据库相关操作查看所有数据库:SHOW DATABASES; 使用数据库：USE 数据库名; 创建数据库并指定编码：CREATE DATABASE [IF NOT EXISTS] 数据库名 [DEFAULT CHARACTER SET UTF8]; 删除数据库：DROP DATABASE 数据库名; 修改数据编码：ALTER DATABASE 数据库名 CHARACTER SET UTF-8; 数据表相关操作创建表：12345CREATE TABLE (IF NOT EXISTS) 表名(列名 列类型，...，列名 列类型)； 查看表结构：DESC 表名; 删除表：DROP 表名; 修改表：修改表有5个操作，前缀名都相同：ALTER TABLE 表名... 添加列：ALTER TABLE 表名 add (列名 列类型，...，列名 列类型); 修改列类型：ALTER TABLE 表名 MODIFY 列名 列的新类型; 列名称列类型一起修改：ALTER TABLE 表名 CHANGE 原列名 新列名 列名类型; 删除列：ALTER TABLE 表名 DROP 列名; 修改表名：ALTER TABLE 表名 RENAME TO 新表名 DML(数据操作语言)语法插入数据insert into 表名 (列名1，列名2，列名3) values (列值1，列值2，列值3) 修改数据修改某列的全部值：insert into 表名 (列名1，列名2，列名3) values (列值1，列值2，列值3) 修改某行或多行记录的列的指定值：update 表名 set 列名1=列值1 where 列名2=列值2 or 列名3=列值3; 删除数据delete from 表名 (where 条件);注意不加where条件时会删除表中的所有记录。 DCL(数据控制语言)语法用来定义用户访问权限。 创建用户用户只能在指定的IP地址上登录mysql:create user 用户名@IP地址 identified by ‘密码’； 用户可以在任意的IP地址上登录mysql：create user 用户名@‘％’ identified by ‘密码’； 给用户授权语法：grant 权限1，…，权限n on 数据库.* to 用户名@IP地址；其中权限1、2、n可以直接用all关键字代替。权限例如:create,alter,drop,insert,update,delete,select。 撤销授权语法:revoke 权限1，…，权限n on 数据库.* from 用户名@ ip地址；撤销指定用户在指定数据库上的指定权限。撤销例如:revoke create,delete on mydb1.* form user@localhost;表示的意思是撤消user用户在数据库mydb1伤的create、alter权限。 查看权限查看指定用户的权限:show grants for 用户名@ip地址； 删除用户drop user 用户名@ip地址； DQL(数据查询语言)语法用来查询记录，不会修改数据库和表结构。 基本查询列控制条件控制排序聚合函数分组查询LIMIT子句(mysql中独有的语法)]]></content>
@@ -28,7 +61,7 @@
     <url>%2F2018%2F05%2F14%2FJava%E4%B8%ADString%E3%80%81StringBuilder%E5%92%8CStringBuffer%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
     <content type="text"><![CDATA[整理下Java中String，StringBuilder和StringBuffer知识点的理解。 String字符串常量 StringBuffer字符串变量（线程安全） StringBuilder字符串变量（非线程安全） String所谓常量，即该对象的值已经被赋予了，不能再更改了，若非要更改，则只能再重新创建另一个对象，在这个新创建的对象上再进行赋值。因此，每次在对String类型的对象进行改变的时候其实都等同于生成了一个新的String对象，然后指针指向新的String对象，所以经常改变内容的字符串最好不要用String。 StringBuffer所谓变量，即是可以随时变化的量。如果对StringBuffer对象进行改变，每次结果都会对StringBuffer对象进行操作，而不是生成新的对象。所以一般字符串要经常变化的话我推荐使用StringBuffer。 StringBuilderStringBuilder和StringBuffer类功能基本相似，方法也差不多，主要区别在于StringBuffer类的方法是多线程安全的，而StringBuilder不是线程安全的，相比而言StringBuilder类会略微快一点。]]></content>
       <categories>
-        <category>Java</category>
+        <category>Java笔记</category>
       </categories>
       <tags>
         <tag>Java</tag>
