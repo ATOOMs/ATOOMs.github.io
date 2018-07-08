@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="PYY的个人博客">
 <meta property="og:description" content="SQL语句分类 DDL(Data Definition Language)   数据定义语言 功能：创建、删除、修改库和表结构   DML(Data Manipulation Language)   数据操作语言 功能：增、删、改表记录   DCL(Data Control Language)   数据库控制语言 功能：用来定义访问权限和安全级别   DQL(Data Query Language">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-08T12:51:42.000Z">
+<meta property="og:updated_time" content="2018-07-08T12:58:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL学习笔记.MySQL语法">
 <meta name="twitter:description" content="SQL语句分类 DDL(Data Definition Language)   数据定义语言 功能：创建、删除、修改库和表结构   DML(Data Manipulation Language)   数据操作语言 功能：增、删、改表记录   DCL(Data Control Language)   数据库控制语言 功能：用来定义访问权限和安全级别   DQL(Data Query Language">
@@ -401,7 +401,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  768 字
+                  779 字
                 </span>
               
 
@@ -493,7 +493,7 @@
 <h2 id="撤销授权"><a href="#撤销授权" class="headerlink" title="撤销授权"></a>撤销授权</h2><p>语法:<code>revoke 权限1，…，权限n on 数据库.* from 用户名@ ip地址；</code>撤销指定用户在指定数据库上的指定权限。撤销例如:<code>revoke create,delete on mydb1.* form user@localhost;</code>表示的意思是撤消user用户在数据库mydb1伤的create、alter权限。</p>
 <h2 id="查看权限"><a href="#查看权限" class="headerlink" title="查看权限"></a>查看权限</h2><p>查看指定用户的权限:<code>show grants for 用户名@ip地址；</code></p>
 <h2 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h2><p><code>drop user 用户名@ip地址；</code></p>
-<h1 id="DQL-数据查询语言-语法"><a href="#DQL-数据查询语言-语法" class="headerlink" title="DQL(数据查询语言)语法"></a>DQL(数据查询语言)语法</h1><p>用来查询记录，不会修改数据库和表结构。<br><code>select 列名 from 表名 where 条件</code></p>
+<h1 id="DQL-数据查询语言-语法"><a href="#DQL-数据查询语言-语法" class="headerlink" title="DQL(数据查询语言)语法"></a>DQL(数据查询语言)语法</h1><p>用来查询记录，不会修改数据库和表结构。<br><code>select 列名 from 表名 where 条件</code><br><br>MySQL LIKE 子句 :<code>SELECT * from runoob_tbl  WHERE runoob_author LIKE &#39;%COM&#39;</code></p>
 <h2 id="基本查询"><a href="#基本查询" class="headerlink" title="基本查询"></a>基本查询</h2><h3 id="列控制"><a href="#列控制" class="headerlink" title="列控制"></a>列控制</h3><h3 id="条件控制"><a href="#条件控制" class="headerlink" title="条件控制"></a>条件控制</h3><h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h2 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h2><h2 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h2><h2 id="LIMIT子句-mysql中独有的语法"><a href="#LIMIT子句-mysql中独有的语法" class="headerlink" title="LIMIT子句(mysql中独有的语法)"></a>LIMIT子句(mysql中独有的语法)</h2>
       
     </div>
