@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="PYY的个人博客">
 <meta property="og:description" content="SQL语句分类 DDL(Data Definition Language)   数据定义语言 功能：创建、删除、修改库和表结构   DML(Data Manipulation Language)   数据操作语言 功能：增、删、改表记录   DCL(Data Control Language)   数据库控制语言 功能：用来定义访问权限和安全级别   DQL(Data Query Language">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-08T12:58:59.000Z">
+<meta property="og:updated_time" content="2018-07-08T13:23:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL学习笔记.MySQL语法">
 <meta name="twitter:description" content="SQL语句分类 DDL(Data Definition Language)   数据定义语言 功能：创建、删除、修改库和表结构   DML(Data Manipulation Language)   数据操作语言 功能：增、删、改表记录   DCL(Data Control Language)   数据库控制语言 功能：用来定义访问权限和安全级别   DQL(Data Query Language">
@@ -401,7 +401,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  779 字
+                  1,297 字
                 </span>
               
 
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -494,7 +494,35 @@
 <h2 id="查看权限"><a href="#查看权限" class="headerlink" title="查看权限"></a>查看权限</h2><p>查看指定用户的权限:<code>show grants for 用户名@ip地址；</code></p>
 <h2 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h2><p><code>drop user 用户名@ip地址；</code></p>
 <h1 id="DQL-数据查询语言-语法"><a href="#DQL-数据查询语言-语法" class="headerlink" title="DQL(数据查询语言)语法"></a>DQL(数据查询语言)语法</h1><p>用来查询记录，不会修改数据库和表结构。<br><code>select 列名 from 表名 where 条件</code><br><br>MySQL LIKE 子句 :<code>SELECT * from runoob_tbl  WHERE runoob_author LIKE &#39;%COM&#39;</code></p>
-<h2 id="基本查询"><a href="#基本查询" class="headerlink" title="基本查询"></a>基本查询</h2><h3 id="列控制"><a href="#列控制" class="headerlink" title="列控制"></a>列控制</h3><h3 id="条件控制"><a href="#条件控制" class="headerlink" title="条件控制"></a>条件控制</h3><h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h2 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h2><h2 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h2><h2 id="LIMIT子句-mysql中独有的语法"><a href="#LIMIT子句-mysql中独有的语法" class="headerlink" title="LIMIT子句(mysql中独有的语法)"></a>LIMIT子句(mysql中独有的语法)</h2>
+<h2 id="基本查询"><a href="#基本查询" class="headerlink" title="基本查询"></a>基本查询</h2><h3 id="列控制"><a href="#列控制" class="headerlink" title="列控制"></a>列控制</h3><ul>
+<li>查询所有列：<code>select * from 表名;</code>其中＊表示查询所有列，而不是所有行的意思。</li>
+<li>查询指定列：<code>select 列1，列2，列n from 表名；</code></li>
+<li>完全重复的记录只显示一次:在查询的列之前添加distinct:<code>select distinct $ from 表名；</code>缺省值为all。</li>
+<li>列运算<ul>
+<li>数量类型的列可以做加、减、乘、除:<code>SELECT sal*5 from 表名；</code>说明:1.遇到null加任何值都等于null的情况，需要用到ifnull()函数。2.将字符串做加减乘除运算，会把字符串当作0。</li>
+<li>字符串累类型可以做连续运算(需要用到concat()函数):<code>select concat(列名1，列名2) from 表名;</code>其中列名的类型要为字符串。</li>
+<li>给列名起别名:<code>select 列名1 (as) 别名1,列名2 (as) 别名2 from 表名；</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="条件控制"><a href="#条件控制" class="headerlink" title="条件控制"></a>条件控制</h3><ul>
+<li>条件查询(在后面添加where指定条件)<br><code>select * from 表名 where 列名＝指定值;</code></li>
+<li>模糊查询(当你想查询所有姓张的记录)<br><code>select * from 表名 where 列名 like ‘张_’;</code>(_代表匹配任意一个字符，％代表匹配0～n个任意字符)。</li>
+</ul>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ul>
+<li>升序:<code>select * form 表名 order by 列名 (ASC );</code> ()里面的内容为缺省值；</li>
+<li>降序:select * from 表名 order by 列名 DESC;</li>
+<li>使用多列作为排序条件: 当第一列排序条件相同时，根据第二列排序条件排序(当第二列依旧相同时可视情况根据第三例条件排序)。<code>select * from 表名 order by 列名1 ASC, 列名2 DESC;</code>意思是当列名1的值相同时按照列名2的值降序排。</li>
+</ul>
+<h2 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h2><ul>
+<li>count:<code>select count(列名) from 表名；</code>,纪录有效行数。</li>
+<li>max:<code>select max(列名) from 表名；</code>,列中最大值。</li>
+<li>min:<code>select min(列名) from 表名；</code>,列中最小值。</li>
+<li>sum:<code>select sum(列名) from 表名；</code>,求列的总值，null 和字符串默认为0。</li>
+<li>avg:<code>select avg(列名) from 表名;</code>,一列的平均值。</li>
+</ul>
+<h2 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h2><h2 id="LIMIT子句-mysql中独有的语法"><a href="#LIMIT子句-mysql中独有的语法" class="headerlink" title="LIMIT子句(mysql中独有的语法)"></a>LIMIT子句(mysql中独有的语法)</h2><p>LIMIT用来限定查询结果的起始行，以及总行数。<br><br>例如：<code>select * from 表名 limit 4，3；</code>表示起始行为第5行，一共查询3行记录。</p>
+
       
     </div>
     
@@ -816,7 +844,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.8k</span>
+    <span title="Site words total count">4.3k</span>
   
 </div>
 
