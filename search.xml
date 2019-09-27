@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[网络工程师如何快速上手编程]]></title>
+    <url>%2F2019%2F09%2F27%2F%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E7%BC%96%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[我超讨厌编程如何快速上手编程不少人说Alex啊，我就是为了逃避编程才做网络工程的啊，我看见代码就头疼，很多同学上网买关于python的书，我的天，跟砖头一样厚，别说是大家，我也肯定看不下去了，所以我们该怎样快速上手编程呢？ 先掌握非常基础的Python技能你必须要知道的knowledge~，就像你想学英语就要先认识26个英文字母一样。 Python的安装和运行 写Python程序的工具或者软件 能够简单通过Python定义一些简单的变量 明白一些简单的逻辑判断和循环语句 Some Basic English, 用于阅读帮助文档 把实际工作需求流程化，细节化，逻辑化编程能解决的问题就是那些流程化，细节化，逻辑化的东西，所以说仔细回忆一下，工作中都有哪些流程化，细节化，逻辑化的东西？ 流程化每次配置设备的时候，有哪些步骤是必须经历的，似乎有点像流水账一样的？有这种东西的话，那请你立马去休息，这种流程化的东西交给程序啊~ 细节化配置设备的时候，都配置了哪些设备，或者哪一组设备？他们的IP是多少？配置文件又存在哪？ 逻辑化你想做的配置有没有配置顺序的要求？如果有顺序请记下来。 想零基础写代码？先拼积木！？？？现在我啥也没学呢，就让我写代码？nonono,先要有最基础的Python知嗷。对于编程入门者来说，我们并不需要软件工程师那样特别好的理论基础和软件架构知识，Come on, Friends, we just use Programming as a tool, 我们只是把编程作为我们提升工作效率的工具而已，当然你要是有这种架构知识更好啦，我个人博客里有关于设计模式的知识，我们可以互相交流。 那我们该如何搭建积木呢？ 百度，Google 没错，百度，Google出来的程序多半是有一点小问题的，运行初期的错误怎么办？继续百度，Google, 这个时候你是带着问题去学习的，对知识的理解能力内化能力都是最好的，相反你看一遍砖头那么厚的Python书，你记住了吗？ 善于使用文档配置网络设备的时候，命令忘记了怎么办？肯定是打问号“？”，这个命令会告诉你有什么工具你还可以继续使用，Python呢？也有的哈，放心吧，而且Python的帮助信息更贴心嗷，这个在以后的文章会提到，先不赘述了。 总结这一篇说实话，确实没啥干货，讲的大多数是方法，不过也是确确实实有效的方法。 下一篇，我讲介绍一些基础的Linux常见命令和使用案例 未完待续ing……]]></content>
+      <categories>
+        <category>网络工程</category>
+      </categories>
+      <tags>
+        <tag>新一代网络工程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[如何做新一代的网络工程师]]></title>
     <url>%2F2019%2F09%2F27%2F%E5%A6%82%E4%BD%95%E5%81%9A%E6%96%B0%E4%B8%80%E4%BB%A3%E7%9A%84%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88%2F</url>
     <content type="text"><![CDATA[业界巨头网工招聘分析Cisco Certifications such as CCIE, RHCE, VCP etc, Understanding in any area of networking such as R&amp;S, Wireless or DC Knowledge of networking fundamentals, products and protocols Programming experience in Python and/or RESTful APIs (using XML/JSON) will be an advantage Google 计算机科学或类似技术领域理学学士学位（或具备同等水平的实践经验）。 在以下至少两个领域具有工作经验：网络应用开发、Unix/Linux 环境、网络 工作能力强，具有良好的英文沟通（书面和口头）能力。 具有一种或多种通用编程语言方面的经验，包括但不限于：Java, C/C++, C#, Objective C, Python, JavaScript 或 Go。 熟悉网络架构，网络管理和排错 Facebook 熟悉IS-IS, BGP, MPLS,并有使用（OpenConfig, NetConf, YANG）等工具的经验 熟悉业界网络硬件和软件架构，以及掌握发展趋势 具有实际编程经验，包括但不限于Python，Go, Perl等语言，尤其是控制和管理网络相关项目的编程经验 熟悉并协调厂商网络产品研发和支持的工作 具有展示技术PPT的沟通能力 关键信息分析无论是Cisco，Google，还是Facebook，先不说他们的不同点是什么，他们都有一个相同点，那就是编程能力，例如： Cisco：Programming experience in Python and/or RESTful APIs (using XML/JSON) will be an advantage. Google：具有一种或多种通用编程语言方面的经验，包括但不限于：Java, C/C++, C#, Objective C, Python, JavaScript 或 Go。 Facebook：具有实际编程经验，包括但不限于Python，Go, Perl等语言，尤其是控制和管理网络相关项目的编程经验。 这几家公司可以说是代表了未来行业的发展方向，在未来网络工程师需要懂编程和网络，才能成为新一代的网络工程师，网络工程1.0时代可能只是对设备工作就OK，但现在的网络在向网络工程2.0时代发展，代表着现在的网络和未来的网络将会大规模化，云计算化，数据中心化，同时各大厂商也在对外开放接口，所以说未来的网络工程是需要那些具有写代码能力的网络工程师来做，因为他们的工作效率和层次是远高于网络工程1.0时代的工程师。 网络工程的新时代我们该怎样提升自己基础知识： XML, JSON, YAML, Jinja2 Linux Python 拔高知识： Ansible Python之Paramiko Juniper之PyEz Git and Github 看了这么多生词，稳住！先不要慌！且听我讲完，明尼苏达工作适应论告诉我们，在行业中一定要有一定的预见性，提前做好准备，当机遇来临时，你就是大浪淘沙过后的人才，So you think the Programming is difficult? Just follow my blog, I believe you will love it~ 持续更新中ing…..]]></content>
