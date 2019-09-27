@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F09%2F27%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[如何做新一代的网络工程师]]></title>
+    <url>%2F2019%2F09%2F27%2F%E5%A6%82%E4%BD%95%E5%81%9A%E6%96%B0%E4%B8%80%E4%BB%A3%E7%9A%84%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88%2F</url>
+    <content type="text"><![CDATA[业界巨头网工招聘分析Cisco Certifications such as CCIE, RHCE, VCP etc, Understanding in any area of networking such as R&amp;S, Wireless or DC Knowledge of networking fundamentals, products and protocols Programming experience in Python and/or RESTful APIs (using XML/JSON) will be an advantage Google 计算机科学或类似技术领域理学学士学位（或具备同等水平的实践经验）。 在以下至少两个领域具有工作经验：网络应用开发、Unix/Linux 环境、网络 工作能力强，具有良好的英文沟通（书面和口头）能力。 具有一种或多种通用编程语言方面的经验，包括但不限于：Java, C/C++, C#, Objective C, Python, JavaScript 或 Go。 熟悉网络架构，网络管理和排错 Facebook 熟悉IS-IS, BGP, MPLS,并有使用（OpenConfig, NetConf, YANG）等工具的经验 熟悉业界网络硬件和软件架构，以及掌握发展趋势 具有实际编程经验，包括但不限于Python，Go, Perl等语言，尤其是控制和管理网络相关项目的编程经验 熟悉并协调厂商网络产品研发和支持的工作 具有展示技术PPT的沟通能力 关键信息分析无论是Cisco，Google，还是Facebook，先不说他们的不同点是什么，他们都有一个相同点，那就是编程能力，例如： Cisco：Programming experience in Python and/or RESTful APIs (using XML/JSON) will be an advantage. Google：具有一种或多种通用编程语言方面的经验，包括但不限于：Java, C/C++, C#, Objective C, Python, JavaScript 或 Go。 Facebook：具有实际编程经验，包括但不限于Python，Go, Perl等语言，尤其是控制和管理网络相关项目的编程经验。 这几家公司可以说是代表了未来行业的发展方向，在未来网络工程师需要懂编程和网络，才能成为新一代的网络工程师，网络工程1.0时代可能只是对设备工作就OK，但现在的网络在向网络工程2.0时代发展，代表着现在的网络和未来的网络将会大规模化，云计算化，数据中心化，同时各大厂商也在对外开放接口，所以说未来的网络工程是需要那些具有写代码能力的网络工程师来做，因为他们的工作效率和层次是远高于网络工程1.0时代的工程师。 网络工程的新时代我们该怎样提升自己基础知识： XML, JSON, YAML, Jinja2 Linux Python 拔高知识： Ansible Python之Paramiko Juniper之PyEz Git and Github 看了这么多生词，稳住！先不要慌！且听我讲完，明尼苏达工作适应论告诉我们，在行业中一定要有一定的预见性，提前做好准备，当机遇来临时，你就是大浪淘沙过后的人才，So you think the Programming is difficult? Just follow my blog, I believe you will love it~ 持续更新中ing…..]]></content>
+      <categories>
+        <category>网络工程</category>
+      </categories>
+      <tags>
+        <tag>新一代网络工程</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[23种设计模式（Java版）]]></title>
