@@ -58,7 +58,7 @@
 </script>
 
   <meta name="description" content="Github的注册">
-<meta name="keywords" content="Github,Hexo">
+<meta name="keywords" content="Hexo,Github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+GitHub博客搭建实战">
 <meta property="og:url" content="https://ATOOMs.github.io/2018/05/13/Hexo-GitHub博客搭建实战/index.html">
@@ -511,9 +511,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Github/" rel="tag"># Github</a>
-            
               <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            
+              <a href="/tags/Github/" rel="tag"># Github</a>
             
           </div>
         
@@ -818,15 +818,15 @@
     }
   }
 
-  fetch('https://app-router.leancloud.cn/2/route?appId=EvbupdV3xEtymxsmf63sWsju-9Nh9j0Va')
+  fetch('https://app-router.leancloud.cn/2/route?appId=')
     .then(response => response.json())
     .then(({ api_server }) => {
       var Counter = (method, url, data) => {
         return fetch(`https://${api_server}/1.1${url}`, {
           method: method,
           headers: {
-            'X-LC-Id': 'EvbupdV3xEtymxsmf63sWsju-9Nh9j0Va',
-            'X-LC-Key': 'tQPXLw3XytLeilFuBVLCS4a1',
+            'X-LC-Id': '',
+            'X-LC-Key': '',
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(data)
