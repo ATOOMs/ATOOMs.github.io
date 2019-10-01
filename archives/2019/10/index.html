@@ -19,6 +19,43 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<span id="sitetime"></span>
+<script language=javascript>
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		var t1 = Date.UTC(2017,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 网站已安全运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒"+"   "+"至今仍由Alex持续维护";
+	}/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+	siteTime();
+</script>
   <link rel="stylesheet" href="/lib/pace/pace-theme-flat-top.min.css?v=1.0.2">
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
 
@@ -57,18 +94,20 @@
   };
 </script>
 
-  <meta name="description" content="404              p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #754297; -webkit-text-stroke: #754297}     p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; colo">
+
+
+
+  <meta name="description" content="做一个有思想的人，做一个敢于思想的人,如果说教育真的能给我们什么财富的话，我想那一定是思想">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Alex的个人博客">
-<meta property="og:url" content="https://ATOOMs.github.io/404/index/index.html">
+<meta property="og:url" content="https://ATOOMs.github.io/archives/2019/10/index.html">
 <meta property="og:site_name" content="Alex的个人博客">
-<meta property="og:description" content="404              p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #754297; -webkit-text-stroke: #754297}     p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; colo">
+<meta property="og:description" content="做一个有思想的人，做一个敢于思想的人,如果说教育真的能给我们什么财富的话，我想那一定是思想">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-30T01:12:00.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Alex的个人博客">
-<meta name="twitter:description" content="404              p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #754297; -webkit-text-stroke: #754297}     p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; colo">
-  <link rel="canonical" href="https://ATOOMs.github.io/404/index/">
+<meta name="twitter:description" content="做一个有思想的人，做一个敢于思想的人,如果说教育真的能给我们什么财富的话，我想那一定是思想">
+  <link rel="canonical" href="https://ATOOMs.github.io/archives/2019/10/">
 
 
 <script id="page-configurations">
@@ -77,12 +116,12 @@
     sidebar: "",
     isHome: false,
     isPost: false,
-    isPage: true,
-    isArchive: false
+    isPage: false,
+    isArchive: true
   };
 </script>
 
-  <title> | Alex的个人博客</title>
+  <title>归档 | Alex的个人博客</title>
   
 
 
@@ -220,28 +259,6 @@
       
       
         
-        <li class="menu-item menu-item-sitemap">
-      
-    
-
-    <a href="/sitemap.html" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-commonweal">
-      
-    
-
-    <a href="/404.html" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益 404</a>
-
-  </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-guestbook">
       
     
@@ -259,12 +276,6 @@
 
     
 
-  
-    
-    
-  
-    
-    
   
     
     
@@ -327,139 +338,70 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">
-
-</h1>
-
-<div class="post-meta">
   
-  <ul class="breadcrumb">
-      
-      
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        
+        
         
           
-            
-          
-          
-            <li><a href="/404/">404</a></li>
-          
         
-      
-    
-      
-      
-        
-          <li>INDEX</li>
-        
-      
-    
-      
-      
-    
-  </ul>
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-        
-          <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title>404</title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1671.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #754297; -webkit-text-stroke: #754297}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #b9141f; -webkit-text-stroke: #b9141f}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #5f7c03; -webkit-text-stroke: #5f7c03}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #b9141f; -webkit-text-stroke: #b9141f; background-color: #f5f5f5}
-    span.s1 {font-kerning: none; background-color: #f5f5f5}
-    span.s2 {font-kerning: none; color: #3c3c3b; background-color: #f5f5f5; -webkit-text-stroke: 0px #3c3c3b}
-    span.s3 {font-kerning: none; color: #b9141f; background-color: #f5f5f5; -webkit-text-stroke: 0px #b9141f}
-    span.s4 {font-kerning: none; color: #5f7c03; background-color: #f5f5f5; -webkit-text-stroke: 0px #5f7c03}
-    span.s5 {font: 13.0px 'PingFang SC'; font-kerning: none; color: #5f7c03; background-color: #f5f5f5; -webkit-text-stroke: 0px #5f7c03}
-    span.s6 {font-kerning: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE HTML&gt;</span></p>
-<p class="p2"><span class="s1">&lt;html&gt;</span></p>
-<p class="p2"><span class="s1">&lt;head&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;meta http-equiv=</span><span class="s1">"content-type"</span><span class="s3"> content=</span><span class="s1">"text/html;charset=utf-8;"</span><span class="s3">/&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;meta http-equiv=</span><span class="s1">"X-UA-Compatible"</span><span class="s3"> content=</span><span class="s1">"IE=edge,chrome=1"</span><span class="s3"> /&gt;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;meta name=</span><span class="s4">"robots"</span><span class="s1"> content=</span><span class="s4">"all"</span><span class="s1"> /&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;meta name=</span><span class="s1">"robots"</span><span class="s3"> content=</span><span class="s1">"index,follow"</span><span class="s3">/&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;link rel=</span><span class="s1">"stylesheet"</span><span class="s3"> type=</span><span class="s1">"text/css"</span><span class="s3"> href=</span><span class="s1">"https://qzone.qq.com/gy/404/style/404style.css"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p2"><span class="s1">&lt;body&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;script type=</span><span class="s1">"text/plain"</span><span class="s3"> src=</span><span class="s1">"http://www.qq.com/404/search_children.js"</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>charset=</span><span class="s4">"utf-8"</span><span class="s1"> homePageUrl=</span><span class="s4">"/"</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>homePageName=</span><span class="s4">"</span><span class="s5">回到我的主页</span><span class="s4">"</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/script&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;script src=</span><span class="s1">"https://qzone.qq.com/gy/404/data.js"</span><span class="s3"> charset=</span><span class="s1">"utf-8"</span><span class="s3">&gt;&lt;/script&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;script src=</span><span class="s1">"https://qzone.qq.com/gy/404/page.js"</span><span class="s3"> charset=</span><span class="s1">"utf-8"</span><span class="s3">&gt;&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p4"><span class="s6">&lt;/html&gt;</span></p>
-</body>
-</html>
-
-        
+        <span class="collection-header">嗯..! 目前共计 12 篇日志。 继续努力。</span>
       </div>
       
-      
-      
-    </div>
-    
-  <ul class="breadcrumb">
-      
-      
-        
-          
-            
-          
-          
-            <li><a href="/404/">404</a></li>
-          
-        
-      
-    
-      
-      
-        
-          <li>INDEX</li>
-        
-      
-    
-      
-      
-    
-  </ul>
 
+      
+
+  
+  
+
+  
     
-    
-    
+    <div class="collection-year">
+      <h1 class="collection-header">2019</h1>
+    </div>
+  
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2019-10-01T11:02:41+08:00"
+              content="2019-10-01">
+          10-01
+        </time>
+      </div>
+
+      <h2 class="post-title">
+        
+          <a class="post-title-link" href="/2019/10/01/Linux入门/" itemprop="url">
+            <span itemprop="name">Linux入门</span>
+          </a>
+        
+      </h2>
+
+    </header>
+  </article>
+
+
+
+
+    </div>
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
           
-    
-    <div class="comments" id="comments"></div>
-  
 
         </div>
           
@@ -474,11 +416,6 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
-        
-        
-        
-        
-      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -508,7 +445,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -596,6 +533,7 @@
   次
   </span>
 
+
 </div>
 
 <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
@@ -607,16 +545,55 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">39k</span>
+    <span title="站点总字数">40k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:11</span>
+    <span title="站点阅读时长">1:13</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.7.1</div>
   <span class="post-meta-divider">|</span>
+
+<span id="sitetime"></span>
+<script language=javascript>
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		var t1 = Date.UTC(2017,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 网站已安全运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒"+"   "+"至今仍由Alex持续维护";
+	}/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+	siteTime();
+</script>
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+
 
 
         
